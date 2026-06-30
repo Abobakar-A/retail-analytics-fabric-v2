@@ -1,0 +1,29 @@
+name: Validate Schema and Code
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install pyspark==3.5.0
+
+      - name: Validate schema contract exists
+        run: |
+          test -f docs/schema_contract.md && echo "Schema contract found" || (echo "Missing schema_contract.md" && exit 1)
+
+      - name: Run schema validation tests
+        run: |
+          python -m pytest tests/ -v
