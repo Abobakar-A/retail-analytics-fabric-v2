@@ -187,4 +187,4 @@ Microsoft Certified Fabric Analytics Engineer Associate (DP-700)
 📍 Dubai, UAE
 🔗 github.com/Abobakar-A/retail-analytics-fabric-v2
 
-## Repository Structure
+
