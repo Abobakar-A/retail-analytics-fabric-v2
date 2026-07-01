@@ -12,6 +12,7 @@ and apply real enterprise standards from the ground up.
 ---
 
 ## Architecture
+```
 Raw Sources
 ↓
 Bronze Layer (OneLake Files)
@@ -31,6 +32,7 @@ gold_revenue_by_category
 gold_customer_segments
 gold_store_performance
 gold_product_performance
+```
 ---
 
 ## Tech Stack
@@ -133,6 +135,7 @@ snapshot used as input to the next batch's mutation step:
 
 ---
 ## Repository Structure
+```
 retail-analytics-fabric-v2/
 ├── .github/
 │   └── workflows/
@@ -146,6 +149,7 @@ retail-analytics-fabric-v2/
 ├── tests/
 │   └── test_schema_validation.py Schema contract validation tests
 └── README.md
+```
 ---
 
 ## Known Limitations & Production Improvements
